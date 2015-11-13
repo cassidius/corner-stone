@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.trivoxhealth.core.controller;
+package com.th.core.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

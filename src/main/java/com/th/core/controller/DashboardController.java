@@ -1,4 +1,4 @@
-package com.trivoxhealth.core.controller;
+package com.th.core.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

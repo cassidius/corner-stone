@@ -28,7 +28,7 @@ public class DataCollectionDAOImpl implements DataCollectionDAO {
     @Qualifier("longJdbcTemplate")
     private JdbcTemplate longJdbcTemplate;
 
-    private static final String GET_DATA_QUERY = "SELECT id, datatype,value,,datacollectionid,recordtime,belongsto,label FROM longitudinaldata WHERE recordtime > ?";
+    private static final String GET_DATA_QUERY = "SELECT id, datatype,value,datacollectionid,recordtime,appliesto,label FROM longitudinaldata WHERE recordtime > ?";
 
     /**
      * Gets a list of the longitudinal datum
@@ -46,8 +46,8 @@ public class DataCollectionDAOImpl implements DataCollectionDAO {
                 ld.setId(rs.getInt("id"));
                 ld.setLabel(rs.getString("label"));
                 ld.setRecordTime(rs.getDate("recordtime"));
-                ld.setType(rs.getString("type"));
-                ld.setValue("value");
+                ld.setType(rs.getString("datatype"));
+                ld.setValue(rs.getString("value"));
                 return ld;
             }
         });

@@ -24,6 +24,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/css/**").permitAll() //Allow anyone to see the CSS
+                .antMatchers("/js/**").permitAll() //Allow anyone to see the JS
                 .antMatchers("/").permitAll() //Allow anyone access to the index
                 .antMatchers("/index.html").permitAll() //Allow anyone access to the index (explicit)
                 .anyRequest().fullyAuthenticated()
